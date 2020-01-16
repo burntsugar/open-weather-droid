@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Parent linear layout with vertical orientation -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        style="@style/au_layout_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- title Child linear layout with horizontal orientation -->
+
+
+        <!--
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/au_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_activity_owm" />
+        </LinearLayout>
+        -->
+
+
+        <!-- city Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            style="@style/au_layout_linear_child"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCityName"
+                style="@style/au_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- Current weather icon -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imgCurrentWeatherIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <TextView
+                android:id="@+id/txtCurrentTempValue"
+                style="@style/au_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- date Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtDate"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- minmax Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtMinLabel"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/lbl_min_temp" />
+
+            <TextView
+                android:id="@+id/txtMinValue"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtMaxLabel"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/lbl_max_temp" />
+
+            <TextView
+                android:id="@+id/txtMaxValue"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- 24 hour Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt24hourLabel"
+                style="@style/au_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/lbl_24_hour" />
+        </LinearLayout>
+
+        <!-- weather 1 Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtForecast1"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast2"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast3"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast4"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- weather 2 Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgForecast1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+        </LinearLayout>
+
+        <!-- weather 3 Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtForecast5"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast6"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast7"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/txtForecast8"
+                style="@style/au_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <!-- weather 4 Child linear layout with horizontal orientation -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgForecast5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+
+            <ImageView
+                android:id="@+id/imgForecast8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cont_desc_default_forecast"
+                android:gravity="center"
+                android:src="@drawable/img01d" />
+        </LinearLayout>
+
+        <!-- progress -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/au_layout_linear_child"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/pbProgress"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

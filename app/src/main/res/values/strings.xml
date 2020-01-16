@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ArchExemplar</string>
+
+    <!-- Misc -->
+    <string name="empty">empty</string>
+
+    <!-- OWMActivity -->
+    <string name="title_activity_owm">Open Weather api: Weather Information</string>
+    <string name="lbl_min_temp">Min temp:</string>
+    <string name="lbl_max_temp">Max temp:</string>
+    <string name="lbl_current_temp">Current temp:</string>
+    <string name="lbl_24_hour">24 hour forecast</string>
+    <string name="cont_desc_default_forecast"></string>
+</resources>
