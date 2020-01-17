@@ -3,9 +3,9 @@
 .idea
 
 projectFilesBackup
-
+*.gradle
 *gradle*.*
-build.gradle
+build.iradle
 /app/build.gradle
 .gradle
 
