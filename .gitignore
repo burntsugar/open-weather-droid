@@ -3,6 +3,8 @@
 .idea
 
 projectFilesBackup
+
+*gradel*
 *.gradle
 *gradle*.*
 build.iradle
