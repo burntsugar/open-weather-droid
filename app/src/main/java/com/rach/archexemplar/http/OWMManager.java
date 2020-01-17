@@ -21,12 +21,8 @@ public class OWMManager implements IAsyncTaskResponse {
     final static String CITY_KEY_TEXT = "q=";
     final static String MEASUREMENTTYPE_KEY_TEXT = "&units=";
     private CommonHttpAsyncTask commonHttpAsyncTask;
-    private String serviceAddress = "";
-    private String apikeyID = BuildConfig.OPEN_WEATHER_MAP_API_KEY;
-
-    private String apikey = "&APPID=" + apikeyID;
-
-
+    private String activeServiceAddress = "";
+    private String apikey = "&APPID=" + BuildConfig.OPEN_WEATHER_MAP_API_KEY;
     public IAsyncTaskHelperResponse delegate = null;
 
 
@@ -38,7 +34,6 @@ public class OWMManager implements IAsyncTaskResponse {
      */
     public void startWeatherTask(String cityName, String unitsType) {
         Logs.logs(CID,"Start startWeatherTask...");
-
         startWeatherTask(cityName, unitsType, null);
     }
 
@@ -53,7 +48,8 @@ public class OWMManager implements IAsyncTaskResponse {
         Logs.logs(CID,"Start startWeatherTask...");
 
         if (!paramsValid(cityName,unitsType)) return;
-        serviceAddress = WEATHER_SERVICE_ADDRESS;
+
+        activeServiceAddress = WEATHER_SERVICE_ADDRESS;
         startHttp(cityName,unitsType,progressBar);
     }
 
@@ -79,13 +75,12 @@ public class OWMManager implements IAsyncTaskResponse {
 
         if (!paramsValid(cityName, unitsType)) return;
 
-        serviceAddress = FORECAST_SERVICE_ADDRESS;
-
+        activeServiceAddress = FORECAST_SERVICE_ADDRESS;
         startHttp(cityName, unitsType, progressBar);
     }
 
     /**
-     * Constructs the serviceAddress with the given parameters, registers as a delegate of the http task and asks for a HTTP client connection.
+     * Constructs the activeServiceAddress with the given parameters, registers as a delegate of the http task and asks for a HTTP client connection.
      * Results are returned to the processFinish method.
      * @param cityName String. The city name value.
      * @param unitsType String. Metric or Imperial. The unitsType value.
@@ -94,7 +89,7 @@ public class OWMManager implements IAsyncTaskResponse {
     private void startHttp(String cityName, String unitsType, ProgressBar progressBar) {
         Logs.logs(CID,"startHttp...");
 
-        String url = serviceAddress + CITY_KEY_TEXT + cityName + MEASUREMENTTYPE_KEY_TEXT + unitsType + apikey;
+        String url = activeServiceAddress + CITY_KEY_TEXT + cityName + MEASUREMENTTYPE_KEY_TEXT + unitsType + apikey;
 
         Logs.logs(CID,"url:",url);
 
@@ -113,6 +108,7 @@ public class OWMManager implements IAsyncTaskResponse {
 
     /**
      * TODO Error handling.
+     * Delegate method of IAsyncTaskResponse
      */
     @Override
     public void processFinish(String output) {
@@ -120,10 +116,11 @@ public class OWMManager implements IAsyncTaskResponse {
 
         Gson gson = new Gson();
 
-        if (serviceAddress.contentEquals(WEATHER_SERVICE_ADDRESS)) {
+        if (activeServiceAddress.contentEquals(WEATHER_SERVICE_ADDRESS)) {
 
             WeatherRootObject wro = null;
 
+            // TODO: handle case.
             if (output == null || output.isEmpty()) {
                 operationStatus = "No weather data received";
             }
@@ -139,10 +136,11 @@ public class OWMManager implements IAsyncTaskResponse {
             }
             delegate.processFinish(wro);
 
-        } else if (serviceAddress.contentEquals(FORECAST_SERVICE_ADDRESS)) {
+        } else if (activeServiceAddress.contentEquals(FORECAST_SERVICE_ADDRESS)) {
 
             ForecastRootObject fro = null;
 
+            // TODO: handle case.
             if (output == null || output.isEmpty()) {
                 operationStatus = "No forecast data received";
             }
