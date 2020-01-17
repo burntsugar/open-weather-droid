@@ -4,6 +4,9 @@
 
 projectFilesBackup
 
+*gradle*.*
+build.gradle
+/app/build.gradle
 .gradle
 
 .gradle/
