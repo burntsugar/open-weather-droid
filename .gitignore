@@ -10,6 +10,8 @@ projectFilesBackup
 #build.iradle
 #/app/build.gradle
 
+gradle.*
+
 .gradle
 
 *.gradle
