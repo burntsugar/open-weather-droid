@@ -12,6 +12,10 @@ projectFilesBackup
 
 .gradle
 
+*.gradle
+
+*.gradle.*
+
 */build
 
 */build/*
