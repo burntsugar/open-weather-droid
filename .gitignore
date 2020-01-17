@@ -4,15 +4,20 @@
 
 projectFilesBackup
 
-*gradle*
-*.gradle
-*gradle*.*
-build.iradle
-/app/build.gradle
+#*gradle*
+#*.gradle
+#*gradle*.*
+#build.iradle
+#/app/build.gradle
+
 .gradle
 
-.gradle/
-build/
+*/build
+
+/build
+
+#.gradle/
+#build/
 
 /local.properties
 
@@ -22,6 +27,6 @@ build/
 
 .DS_Store
 
-/build
+#/build
 
 /captures
