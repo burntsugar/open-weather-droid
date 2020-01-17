@@ -4,12 +4,6 @@
 
 projectFilesBackup
 
-#*gradle*
-#*.gradle
-#*gradle*.*
-#build.iradle
-#/app/build.gradle
-
 gradle.*
 
 .gradle
@@ -26,11 +20,6 @@ gradlew.*
 
 /build
 
-
-
-#.gradle/
-#build/
-
 /local.properties
 
 /.idea/workspace.xml
@@ -38,7 +27,5 @@ gradlew.*
 /.idea/libraries
 
 .DS_Store
-
-#/build
 
 /captures
