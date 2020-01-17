@@ -4,8 +4,10 @@
 
 projectFilesBackup
 
-*.gradle*.*
-/build/
+.gradle
+
+.gradle/
+build/
 
 /local.properties
 
