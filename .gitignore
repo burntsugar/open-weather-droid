@@ -2,21 +2,10 @@
 
 .idea
 
-projectFilesBackup
-
-gradle.*
-
 .gradle
+/build
 
-gradle/
-
-*.gradle
-
-*.gradle.*
-
-gradlew
-
-gradlew.*
+gradle.properties
 
 /build
 
