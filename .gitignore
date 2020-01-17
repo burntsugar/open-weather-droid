@@ -20,6 +20,10 @@ gradle/
 
 *.gradle.*
 
+gradlew
+
+gradlew.*
+
 /build
 
 
