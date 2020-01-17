@@ -12,7 +12,7 @@ import com.rach.archexemplar.weatherclasses.WeatherRootObject;
 /**
  * Created by rachaelcolley on 19/04/2017.
  */
-public class OWMManager implements IAsyncTaskResponse {
+public class OWMManager implements IAsyncTaskResponseDelegate {
 
     private final String CID = getClass().getSimpleName();
     private String operationStatus = "The " + CID + " core looks beautiful";
@@ -23,7 +23,7 @@ public class OWMManager implements IAsyncTaskResponse {
     private CommonHttpAsyncTask commonHttpAsyncTask;
     private String activeServiceAddress = "";
     private String apikey = "&APPID=" + BuildConfig.OPEN_WEATHER_MAP_API_KEY;
-    public IAsyncTaskHelperResponse delegate = null;
+    public IAsyncTaskResultsDelegate delegate = null;
 
 
     /**
@@ -108,7 +108,7 @@ public class OWMManager implements IAsyncTaskResponse {
 
     /**
      * TODO Error handling.
-     * Delegate method of IAsyncTaskResponse
+     * Delegate method of IAsyncTaskResponseDelegate
      */
     @Override
     public void processFinish(String output) {

@@ -22,7 +22,7 @@ public class MyHttpClass extends AsyncTask<String, Integer, String> {
     private boolean success = true;
     private ProgressBar progressBar;
 
-    public IAsyncTaskResponse delegate = null;
+    public IAsyncTaskResponseDelegate delegate = null;
 
     /**
      * Provides networking for common web service requests without blocking the main UI thread.

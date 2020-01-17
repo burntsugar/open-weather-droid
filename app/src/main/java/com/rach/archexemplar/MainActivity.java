@@ -1,6 +1,5 @@
 package com.rach.archexemplar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.Toast;
 
 import com.rach.archexemplar.forecastclasses.ForecastRootObject;
 import com.rach.archexemplar.http.DownloadImageTask;
-import com.rach.archexemplar.http.IAsyncTaskHelperResponse;
+import com.rach.archexemplar.http.IAsyncTaskResultsDelegate;
 import com.rach.archexemplar.http.OWMManager;
 import com.rach.archexemplar.utility.ConvertTime;
 import com.rach.archexemplar.utility.Logs;
@@ -19,7 +18,7 @@ import com.rach.archexemplar.weatherclasses.WeatherRootObject;
 
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity implements IAsyncTaskHelperResponse {
+public class MainActivity extends AppCompatActivity implements IAsyncTaskResultsDelegate {
 
     private final String CID = getClass().getSimpleName();
 
@@ -58,9 +57,10 @@ public class MainActivity extends AppCompatActivity implements IAsyncTaskHelperR
         Logs.logs(CID,"onStart...");
         findControlsInLayout();
         startAPIRequests(currentCity+COUNTRY_CODE, currentMeasurementType);
-        Intent intent = new Intent(this,ExService.class);
-        startService(intent);
-        // TODO: getSystemService(Context.)
+        // TODO
+//        Intent intent = new Intent(this,ExService.class);
+//        startService(intent);
+//        getSystemService(Context...)
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.rach.archexemplar.weatherclasses.WeatherRootObject;
 /**
  * Created by rachaelcolley on 19/04/2017.
  */
-public interface IAsyncTaskHelperResponse {
+public interface IAsyncTaskResultsDelegate {
 
     void processFinish(WeatherRootObject output);
     void processFinish(ForecastRootObject output);
